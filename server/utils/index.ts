@@ -56,9 +56,8 @@ export const addProtocol = (url: string): string => {
 };
 
 export const generateShortLink = (id: string, domain?: string): string => {
-  const protocol =
-    env.CUSTOM_DOMAIN_USE_HTTPS || !domain ? "https://" : "http://";
-  return `${protocol}${domain || env.DEFAULT_DOMAIN}/${id}`;
+  const protocol = env.CUSTOM_DOMAIN_USE_HTTPS ? "https://" : "http://";
+  return `${protocol}${domain || env.DEFAULT_DOMAIN}/d/${id}`;
 };
 
 export const getRedisKey = {
