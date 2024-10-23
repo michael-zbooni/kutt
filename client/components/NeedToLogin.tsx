@@ -69,7 +69,7 @@ const NeedToLogin = () => (
         <Button>Login / Signup</Button>
       </Link>
     </Col>
-    <Image src="/images/callout.png" alt="callout image" />
+    <Image src="/d/images/callout.png" alt="callout image" />
   </Wrapper>
 );
 

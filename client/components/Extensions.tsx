@@ -95,7 +95,7 @@ const Extensions = () => (
         rel="noopener noreferrer"
       >
         <ChromeButton>
-          <Icon src="/images/googlechrome.svg" color="#4285f4" />
+          <Icon src="/d/images/googlechrome.svg" color="#4285f4" />
           <span>Download for Chrome</span>
         </ChromeButton>
       </Link>
@@ -105,7 +105,7 @@ const Extensions = () => (
         rel="noopener noreferrer"
       >
         <FirefoxButton>
-          <Icon src="/images/mozillafirefox.svg" color="#e0890f" />
+          <Icon src="/d/images/mozillafirefox.svg" color="#e0890f" />
           <span>Download for Firefox</span>
         </FirefoxButton>
       </Link>
