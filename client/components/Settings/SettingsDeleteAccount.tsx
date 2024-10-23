@@ -27,13 +27,13 @@ const SettingsDeleteAccount: FC = () => {
     }
   );
 
-  const onSubmit = async e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (loading) return;
     setModal(true);
   };
 
-  const onDelete = async e => {
+  const onDelete = async (e) => {
     e.preventDefault();
     if (loading) return;
     setLoading(true);

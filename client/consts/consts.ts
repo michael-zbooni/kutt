@@ -9,16 +9,16 @@ export const DISALLOW_REGISTRATION =
   publicRuntimeConfig.DISALLOW_REGISTRATION === "true";
 
 export enum APIv2 {
-  AuthLogin = "/api/v2/auth/login",
-  AuthSignup = "/api/v2/auth/signup",
-  AuthRenew = "/api/v2/auth/renew",
-  AuthResetPassword = "/api/v2/auth/reset-password",
-  AuthChangePassword = "/api/v2/auth/change-password",
-  AuthChangeEmail = "/api/v2/auth/change-email",
-  AuthGenerateApikey = "/api/v2/auth/apikey",
-  Users = "/api/v2/users",
-  Domains = "/api/v2/domains",
-  Links = "/api/v2/links"
+  AuthLogin = "/d/api/v2/auth/login",
+  AuthSignup = "/d/api/v2/auth/signup",
+  AuthRenew = "/d/api/v2/auth/renew",
+  AuthResetPassword = "/d/api/v2/auth/reset-password",
+  AuthChangePassword = "/d/api/v2/auth/change-password",
+  AuthChangeEmail = "/d/api/v2/auth/change-email",
+  AuthGenerateApikey = "/d/api/v2/auth/apikey",
+  Users = "/d/api/v2/users",
+  Domains = "/d/api/v2/domains",
+  Links = "/d/api/v2/links"
 }
 
 export enum Colors {

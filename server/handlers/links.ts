@@ -278,9 +278,20 @@ export const redirect = (app: ReturnType<typeof next>): Handler => async (
     domain_id: domain ? domain.id : null
   });
 
+  console.log('THIS IS EXPECTED TO REDIRECT (outside if)', {
+    link,
+    url: req.url,
+    originalUrl: req.originalUrl,
+  });
+
   // 3. When no link, if has domain redirect to domain's homepage
   // otherwise redirect to 404
   if (!link) {
+    console.log('THIS IS EXPECTED TO REDIRECT (inside if)', {
+      link,
+      url: req.url,
+      originalUrl: req.originalUrl,
+    });
     return res.redirect(302, domain ? domain.homepage : "/404");
   }
 
@@ -364,7 +375,17 @@ export const redirectCustomDomain: Handler = async (req, res, next) => {
       ? domain.homepage
       : `https://${env.DEFAULT_DOMAIN + path}`;
 
-    return res.redirect(302, redirectURL);
+    console.log('FOUND THE SOURCE OF MY MISERY ✌️', {
+      domain,
+      redirectURL,
+    })
+
+    if (path === '/') {
+      console.log('EUREKA!! FOUND THE BLACK SHEEP! ✌️✌️')
+      next();
+    } else {
+      return res.redirect(302, redirectURL);
+    }
   }
 
   return next();
