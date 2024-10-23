@@ -9,5 +9,14 @@ module.exports = {
     REPORT_EMAIL: localEnv && localEnv.REPORT_EMAIL,
     DISALLOW_ANONYMOUS_LINKS: localEnv && localEnv.DISALLOW_ANONYMOUS_LINKS,
     DISALLOW_REGISTRATION: localEnv && localEnv.DISALLOW_REGISTRATION
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: "/:path*", // Match any route without `/d`
+        destination: "/d/:path*" // Add `/d` prefix when accessing the actual routes
+      }
+    ];
   }
 };
